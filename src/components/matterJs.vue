@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="testLabel">Testing</div>
-    <div id="drawhere"></div>
+    <canvas id="canvas"></canvas>
   </div>
 </template>
 
@@ -10,22 +10,49 @@
 import { Engine, Render, Runner, Bodies, Composite } from 'matter-js';
 
 export default {
+  data() {
+    return {};
+  },
   mounted() {
-    // module aliases
+    // dimentions
+    const height = window.innerHeight;
+    const width = window.innerWidth;
+
+    // Build Canvas
+    const canvas = document.getElementById('canvas');
+
+    canvas.width = width;
+    canvas.height = height;
 
     // create an engine
-    const engine = Engine.create();
+    const engine = Engine.create({
+      render: {
+        element: document.body,
+        canvas,
+        options: {
+          width,
+          height,
+        },
+      },
+    });
 
     // create a renderer
     const render = Render.create({
-      element: document.querySelector('#drawhere'),
+      element: document.body,
+      canvas,
+      options: {
+        width,
+        height,
+      },
       engine,
     });
 
     // create two boxes and a ground
     const boxA = Bodies.rectangle(400, 200, 80, 80);
     const boxB = Bodies.rectangle(450, 50, 80, 80);
-    const ground = Bodies.rectangle(400, 610, 810, 60, { isStatic: true });
+    const ground = Bodies.rectangle(width / 2, height, width, 1, {
+      isStatic: true,
+    });
 
     // add all of the bodies to the world
     Composite.add(engine.world, [boxA, boxB, ground]);
@@ -42,4 +69,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+#canvas {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+}
+</style>
