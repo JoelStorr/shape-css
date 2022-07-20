@@ -47,16 +47,26 @@ export default {
       engine,
     });
 
+    const options = {
+      friction: 0.8,
+    };
+
     // create two boxes and a ground
     for (let i = 0; i <= 100; i += 1) {
       let bodyrand;
       const randVal = Math.floor(Math.random() * 3);
       if (randVal === 0) {
-        bodyrand = Bodies.rectangle(Math.random() * width, 0, 80, 80);
+        bodyrand = Bodies.rectangle(
+          Math.random() * width,
+          0,
+          150,
+          150,
+          options,
+        );
       } else if (randVal === 1) {
-        bodyrand = Bodies.circle(Math.random() * width, 0, 80, 80, 50);
+        bodyrand = Bodies.circle(Math.random() * width, 0, 80, 80, 50, options);
       } else {
-        bodyrand = Bodies.polygon(Math.random() * width, 0, 3, 80);
+        bodyrand = Bodies.polygon(Math.random() * width, 0, 3, 100, options);
       }
 
       Composite.add(engine.world, [bodyrand]);
