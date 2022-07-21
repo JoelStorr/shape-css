@@ -3,7 +3,7 @@
     <h1>Looks like you are on Mobile</h1>
     <p>
       We currently don't support Mobile devices :( <br />
-      You can copy the Link to thsi site below to send it to a Pc
+      You can copy the Link to this site below to send it to a Pc
     </p>
     <button @click="copyURL">Copy URL</button>
   </div>
