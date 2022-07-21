@@ -1,11 +1,11 @@
 <template>
   <div class="full-view">
-    <h1>Main Menue (Work in Progress)</h1>
+    <h1>Main Menu (Work in Progress)</h1>
 
     <div class="menue-container">
       <base-card-component
         v-for="example in examples"
-        :icon="example.icon"
+        :setIcon="example.icon"
         :name="example.name"
         :desc="example.desc"
         :toolPath="example.toolPath"
@@ -26,73 +26,73 @@ export default {
     return {
       examples: [
         {
-          icon: 'a-eye-dropper',
+          icon: 'fa-eye-dropper',
           name: 'Color Picker',
           desc: 'Find the Perfect Color for your project',
           toolPath: '/color-picker',
         },
         {
-          icon: 'a-eye-dropper',
+          icon: 'fa-eye-dropper',
           name: '3D Transform',
           desc: 'Find the Perfect Color for your project',
           toolPath: '/3d-transform',
         },
         {
-          icon: 'a-eye-dropper',
+          icon: 'fa-eye-dropper',
           name: 'Drop Shadow',
           desc: 'Find the Perfect Color for your project',
           toolPath: '/drop-sahdow',
         },
         {
-          icon: 'a-eye-dropper',
+          icon: 'fa-eye-dropper',
           name: 'Color Picker',
           desc: 'Find the Perfect Color for your project',
           toolPath: '/color-picker',
         },
         {
-          icon: 'a-eye-dropper',
+          icon: 'fa-eye-dropper',
           name: '3D Transform',
           desc: 'Find the Perfect Color for your project',
           toolPath: '/3d-transform',
         },
         {
-          icon: 'a-eye-dropper',
+          icon: 'fa-eye-dropper',
           name: 'Drop Shadow',
           desc: 'Find the Perfect Color for your project',
           toolPath: '/drop-sahdow',
         },
         {
-          icon: 'a-eye-dropper',
+          icon: 'fa-eye-dropper',
           name: 'Color Picker',
           desc: 'Find the Perfect Color for your project',
           toolPath: '/color-picker',
         },
         {
-          icon: 'a-eye-dropper',
+          icon: 'fa-eye-dropper',
           name: '3D Transform',
           desc: 'Find the Perfect Color for your project',
           toolPath: '/3d-transform',
         },
         {
-          icon: 'a-eye-dropper',
+          icon: 'fa-eye-dropper',
           name: 'Drop Shadow',
           desc: 'Find the Perfect Color for your project',
           toolPath: '/drop-sahdow',
         },
         {
-          icon: 'a-eye-dropper',
+          icon: 'fa-eye-dropper',
           name: 'Color Picker',
           desc: 'Find the Perfect Color for your project',
           toolPath: '/color-picker',
         },
         {
-          icon: 'a-eye-dropper',
+          icon: 'fa-eye-dropper',
           name: '3D Transform',
           desc: 'Find the Perfect Color for your project',
           toolPath: '/3d-transform',
         },
         {
-          icon: 'a-eye-dropper',
+          icon: 'fa-eye-dropper',
           name: 'Drop Shadow',
           desc: 'Find the Perfect Color for your project',
           toolPath: '/drop-sahdow',

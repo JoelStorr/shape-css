@@ -1,6 +1,6 @@
 <template>
   <div class="base-card" :style="cssVars">
-    <i class="fa-solid" :class="{ icon }"></i>
+    <i :class="['fa-solid', setIcon]"></i>
     <h3>{{ name }}</h3>
     <p>{{ desc }}</p>
     <router-link :to="toolPath">
@@ -13,7 +13,7 @@
 <script>
 export default {
   props: {
-    icon: String,
+    setIcon: String,
     name: String,
     desc: String,
     toolPath: String,
