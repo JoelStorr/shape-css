@@ -107,7 +107,7 @@ export default {
 .full-view {
   width: 100vw;
   height: 100vh;
-  background-color: aqua;
+  background-color: #2c3e50;
 }
 
 .menue-container {
@@ -116,5 +116,9 @@ export default {
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
+}
+h1 {
+  color: white;
+  padding-top: 10vh;
 }
 </style>

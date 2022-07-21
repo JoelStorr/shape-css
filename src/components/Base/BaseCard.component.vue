@@ -37,7 +37,7 @@ export default {
   height: 25vh;
   background-color: white;
   border-radius: 5px;
-  box-shadow: 5px 5px 3px 2px rgb(204, 204, 204);
+  box-shadow: 5px 5px 2px 1px rgba(55, 55, 56, 0.515);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
