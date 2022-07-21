@@ -1,6 +1,6 @@
 <template>
   <div class="full-view">
-    <h1>Main Menue</h1>
+    <h1>Main Menue (Work in Progress)</h1>
 
     <div class="menue-container">
       <base-card-component
