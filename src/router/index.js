@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../components/matterJs.vue';
+import HomeView from '../components/HomeComp/matterJs.vue';
 import MenueView from '../views/MenueView.vue';
 import MobileHome from '../views/MobileHome.component.vue';
 

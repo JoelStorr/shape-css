@@ -8,7 +8,7 @@
 <script>
 // @ is an alias to /src
 
-import matterJsVue from '@/components/matterJs.vue';
+import matterJsVue from '@/components/HomeComp/matterJs.vue';
 
 export default {
   name: 'HomeView',
