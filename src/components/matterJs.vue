@@ -1,6 +1,9 @@
 <template>
   <div id="content">
-    <button class="startbtn" @click="changeToMenue">Start</button>
+    <button class="startbtn" @click="changeToMenue">
+      START
+      <i class="fa-solid fa-angle-right"></i>
+    </button>
     <h1 class="headLabel">Shape <br />CSS</h1>
 
     <Transition>
@@ -189,8 +192,16 @@ export default {
   color: white;
   font-weight: bold;
   font-size: 1.5rem;
-
+  cursor: pointer;
   z-index: 10;
+}
+
+.startbtn:hover {
+  box-shadow: 0 0 20px 10px rgb(155, 155, 155);
+}
+.startbtn:active {
+  background-color: white;
+  color: #14161f;
 }
 
 .blocker {
