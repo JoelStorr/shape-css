@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../components/matterJs.vue';
 import MenueView from '../views/MenueView.vue';
+import MobileHome from '../views/MobileHome.component.vue';
 
 const routes = [
   {
@@ -20,6 +21,11 @@ const routes = [
     path: '/main-menue',
     name: 'mainMenue',
     component: MenueView,
+  },
+  {
+    path: '/mobile',
+    name: 'mobile',
+    component: MobileHome,
   },
 
 ];

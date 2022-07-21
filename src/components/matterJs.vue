@@ -1,7 +1,8 @@
 <template>
   <div id="content">
     <button class="startbtn" @click="changeToMenue">Start</button>
-    <div class="testLabel">Shape CSS</div>
+    <h1 class="headLabel">Shape <br />CSS</h1>
+
     <Transition>
       <div class="blocker" if="!show"></div>
     </Transition>
@@ -149,9 +150,11 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #content {
   background-color: #14161f;
+  width: 100vw;
+  height: 100vh;
 }
 #canvas {
   position: absolute;
@@ -159,11 +162,13 @@ export default {
   top: 0;
   left: 0;
 }
-.testLabel {
+
+.headLabel {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
   color: white;
   font-weight: 700;
   font-size: 20rem;
@@ -204,5 +209,15 @@ export default {
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
+}
+
+@media screen and(max-width: 900) {
+  .headLabel {
+    font-size: 1rem;
+    min-height: 100vh;
+  }
+  #content {
+    height: max-content;
+  }
 }
 </style>

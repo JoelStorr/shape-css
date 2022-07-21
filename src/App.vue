@@ -13,6 +13,20 @@
   </div>
 </template>
 
+<script>
+export default {
+  mounted() {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent,
+      )
+    ) {
+      this.$router.push('/mobile');
+    }
+  },
+};
+</script>
+
 <style lang="scss">
 * {
   margin: 0;
