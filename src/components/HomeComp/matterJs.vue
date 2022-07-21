@@ -155,7 +155,7 @@ export default {
 
 <style scoped>
 #content {
-  background-color: #14161f;
+  background-color: #14151f;
   width: 100vw;
   height: 100vh;
 }
@@ -201,13 +201,13 @@ export default {
 }
 .startbtn:active {
   background-color: white;
-  color: #14161f;
+  color: #14151f;
 }
 
 .blocker {
   width: 100vw;
   height: 100vh;
-  background-color: #14161f;
+  background-color: #14151f;
   opacity: 1;
 }
 

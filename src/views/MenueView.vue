@@ -107,7 +107,7 @@ export default {
 .full-view {
   width: 100vw;
   height: 100vh;
-  background-color: #2c3e50;
+  background-color: #14151f;
 }
 
 .menue-container {

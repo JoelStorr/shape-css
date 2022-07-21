@@ -41,7 +41,7 @@ export default {
 }
 
 .main-content {
-  background-color: #2c3e50;
+  background-color: #14151f;
 }
 nav {
   padding: 30px;
