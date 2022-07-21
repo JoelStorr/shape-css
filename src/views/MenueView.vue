@@ -1,11 +1,106 @@
 <template>
   <div class="full-view">
     <h1>Main Menue</h1>
+
+    <div class="menue-container">
+      <base-card-component
+        v-for="example in examples"
+        :icon="example.icon"
+        :name="example.name"
+        :desc="example.desc"
+        :toolPath="example.toolPath"
+        :key="example.toolPath"
+        :setPadding="['10px', '5px']"
+      />
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+import BaseCardComponent from '@/components/Base/BaseCard.component.vue';
+
+export default {
+  components: { BaseCardComponent },
+
+  data() {
+    return {
+      examples: [
+        {
+          icon: 'a-eye-dropper',
+          name: 'Color Picker',
+          desc: 'Find the Perfect Color for your project',
+          toolPath: '/color-picker',
+        },
+        {
+          icon: 'a-eye-dropper',
+          name: '3D Transform',
+          desc: 'Find the Perfect Color for your project',
+          toolPath: '/3d-transform',
+        },
+        {
+          icon: 'a-eye-dropper',
+          name: 'Drop Shadow',
+          desc: 'Find the Perfect Color for your project',
+          toolPath: '/drop-sahdow',
+        },
+        {
+          icon: 'a-eye-dropper',
+          name: 'Color Picker',
+          desc: 'Find the Perfect Color for your project',
+          toolPath: '/color-picker',
+        },
+        {
+          icon: 'a-eye-dropper',
+          name: '3D Transform',
+          desc: 'Find the Perfect Color for your project',
+          toolPath: '/3d-transform',
+        },
+        {
+          icon: 'a-eye-dropper',
+          name: 'Drop Shadow',
+          desc: 'Find the Perfect Color for your project',
+          toolPath: '/drop-sahdow',
+        },
+        {
+          icon: 'a-eye-dropper',
+          name: 'Color Picker',
+          desc: 'Find the Perfect Color for your project',
+          toolPath: '/color-picker',
+        },
+        {
+          icon: 'a-eye-dropper',
+          name: '3D Transform',
+          desc: 'Find the Perfect Color for your project',
+          toolPath: '/3d-transform',
+        },
+        {
+          icon: 'a-eye-dropper',
+          name: 'Drop Shadow',
+          desc: 'Find the Perfect Color for your project',
+          toolPath: '/drop-sahdow',
+        },
+        {
+          icon: 'a-eye-dropper',
+          name: 'Color Picker',
+          desc: 'Find the Perfect Color for your project',
+          toolPath: '/color-picker',
+        },
+        {
+          icon: 'a-eye-dropper',
+          name: '3D Transform',
+          desc: 'Find the Perfect Color for your project',
+          toolPath: '/3d-transform',
+        },
+        {
+          icon: 'a-eye-dropper',
+          name: 'Drop Shadow',
+          desc: 'Find the Perfect Color for your project',
+          toolPath: '/drop-sahdow',
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
@@ -13,5 +108,13 @@ export default {};
   width: 100vw;
   height: 100vh;
   background-color: aqua;
+}
+
+.menue-container {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 </style>
