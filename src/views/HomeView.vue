@@ -19,3 +19,9 @@ export default {
   methods: {},
 };
 </script>
+
+<style>
+.home {
+  background-color: #14161f;
+}
+</style>

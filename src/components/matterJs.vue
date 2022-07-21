@@ -1,7 +1,10 @@
 <template>
-  <div class="content">
+  <div id="content">
     <button class="startbtn" @click="changeToMenue">Start</button>
     <div class="testLabel">Shape CSS</div>
+    <Transition>
+      <div class="blocker" if="!show"></div>
+    </Transition>
     <canvas id="canvas"></canvas>
   </div>
 </template>
@@ -16,6 +19,7 @@ export default {
       runner: null,
       engine: null,
       render: null,
+      show: true,
     };
   },
   mounted() {
@@ -131,23 +135,27 @@ export default {
 
   methods: {
     changeToMenue() {
+      this.show = false;
+      this.$router.push('/main-menue');
       // Destroy Render Engine on Route Change
       Render.stop(this.render);
-      Engine.clear(this.engine);
       this.render.canvas.remove();
+      Engine.clear(this.engine);
       this.render.canvas = null;
       this.render.context = null;
       this.render.textures = {};
-      this.render.canvas = this.$router.push('/about');
     },
   },
 };
 </script>
 
 <style>
+#content {
+  background-color: #14161f;
+}
 #canvas {
   position: absolute;
-
+  opacity: 1;
   top: 0;
   left: 0;
 }
@@ -178,5 +186,22 @@ export default {
   font-size: 1.5rem;
 
   z-index: 10;
+}
+
+.blocker {
+  width: 100vw;
+  height: 100vh;
+  background-color: #14161f;
+  opacity: 1;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 2s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>
