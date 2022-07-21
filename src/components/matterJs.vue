@@ -1,5 +1,6 @@
 <template>
   <div class="content">
+    <button class="startbtn" @click="changeToMenue">Start</button>
     <div class="testLabel">Shape CSS</div>
     <canvas id="canvas"></canvas>
   </div>
@@ -11,12 +12,20 @@ import { Engine, Render, Runner, Bodies, Composite } from 'matter-js';
 
 export default {
   data() {
-    return {};
+    return {
+      runner: null,
+      engine: null,
+      render: null,
+    };
   },
   mounted() {
     // dimentions
     const height = window.innerHeight;
     const width = window.innerWidth;
+
+    // relational Dimentions
+    const pheight = height / 100;
+    const pwidth = width / 100;
 
     // Build Canvas
     const canvas = document.getElementById('canvas');
@@ -36,6 +45,8 @@ export default {
       },
     });
 
+    this.engine = engine;
+
     // create a renderer
     const render = Render.create({
       element: document.body,
@@ -47,8 +58,10 @@ export default {
       engine,
     });
 
+    this.render = render;
+
     const options = {
-      friction: 0.8,
+      friction: 0.7,
     };
 
     // create two boxes and a ground
@@ -56,28 +69,43 @@ export default {
       let bodyrand;
       const randVal = Math.floor(Math.random() * 3);
       if (randVal === 0) {
+        // Boxes
         bodyrand = Bodies.rectangle(
           Math.random() * width,
-          0,
-          150,
-          150,
+          -20,
+          pwidth * 4,
+          pwidth * 4,
           options,
         );
       } else if (randVal === 1) {
-        bodyrand = Bodies.circle(Math.random() * width, 0, 80, 80, 50, options);
+        // Circles
+        bodyrand = Bodies.circle(
+          Math.random() * width,
+          -20,
+          pwidth * 3,
+          pwidth * 3,
+          50,
+          options,
+        );
       } else {
-        bodyrand = Bodies.polygon(Math.random() * width, 0, 3, 100, options);
+        // Polygons
+        bodyrand = Bodies.polygon(
+          Math.random() * width,
+          -20,
+          3,
+          pwidth * 3,
+          options,
+        );
       }
 
       Composite.add(engine.world, [bodyrand]);
     }
 
-    const boxA = Bodies.rectangle(400, 200, 80, 80);
-    const boxB = Bodies.rectangle(450, 50, 80, 80);
+    // Main Static Circle
     const boxStatic = Bodies.circle(
       width / 2,
       height / 2,
-      400,
+      pheight * 40,
       {
         isStatic: true,
       },
@@ -88,16 +116,30 @@ export default {
     });
 
     // add all of the bodies to the world
-    Composite.add(engine.world, [boxA, boxB, boxStatic, ground]);
+    Composite.add(engine.world, [boxStatic, ground]);
 
     // run the renderer
     Render.run(render);
 
     // create runner
     const runner = Runner.create();
+    this.runner = runner;
 
     // run the engine
     Runner.run(runner, engine);
+  },
+
+  methods: {
+    changeToMenue() {
+      // Destroy Render Engine on Route Change
+      Render.stop(this.render);
+      Engine.clear(this.engine);
+      this.render.canvas.remove();
+      this.render.canvas = null;
+      this.render.context = null;
+      this.render.textures = {};
+      this.render.canvas = this.$router.push('/about');
+    },
   },
 };
 </script>
@@ -105,7 +147,7 @@ export default {
 <style>
 #canvas {
   position: absolute;
-  z-index: -2;
+
   top: 0;
   left: 0;
 }
@@ -116,6 +158,25 @@ export default {
   transform: translate(-50%, -50%);
   color: white;
   font-weight: 700;
-  font-size: 350px;
+  font-size: 20rem;
+  line-height: 1.4;
+  z-index: 1;
+  user-select: none;
+}
+.startbtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 50px;
+  background: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  z-index: 10;
 }
 </style>
