@@ -5,7 +5,10 @@
       We currently don't support Mobile devices :( <br />
       You can copy the Link to this site below to send it to a Pc
     </p>
-    <button @click="copyURL">Copy URL</button>
+    <button @click="copyURL">
+      Copy URL
+      <i class="fa-solid fa-clipboard space"></i>
+    </button>
   </div>
 </template>
 
@@ -59,5 +62,9 @@ button {
 button:active {
   background: white;
   color: #14161f;
+}
+
+.space {
+  margin-left: 10px;
 }
 </style>
