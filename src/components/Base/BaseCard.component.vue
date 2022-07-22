@@ -1,6 +1,6 @@
 <template>
   <div class="base-card" :style="cssVars">
-    <i :class="['fa-solid', 'main-icon', setIcon]"></i>
+    <i :class="['main-icon', setIcon]"></i>
     <h2>{{ name }}</h2>
     <p>{{ desc }}</p>
     <router-link :to="toolPath" class="outline-btn">

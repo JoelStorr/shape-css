@@ -101,6 +101,7 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  overflow: hidden;
 
   min-width: 50vw;
   max-width: 60vw;
@@ -128,6 +129,7 @@ h1 {
     display: flex;
     flex-direction: column;
     max-width: 25vw;
+    text-align: left;
   }
 }
 
@@ -143,7 +145,8 @@ h1 {
   .shape {
     width: 250px;
     height: 250px;
-    background-color: red;
+    background-color: #4a4e69;
+    z-index: -5;
   }
 }
 p {

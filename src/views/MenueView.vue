@@ -26,76 +26,10 @@ export default {
     return {
       examples: [
         {
-          icon: 'fa-eye-dropper',
-          name: 'Color Picker',
-          desc: 'Find the Perfect Color for your project',
+          icon: ' fa-solid fa-cube',
+          name: '3D Transform',
+          desc: 'An easy way to provide 3D transforms to your elements.',
           toolPath: '/tools/threed-transform',
-        },
-        {
-          icon: 'fa-eye-dropper',
-          name: '3D Transform',
-          desc: 'Find the Perfect Color for your project',
-          toolPath: '/3d-transform',
-        },
-        {
-          icon: 'fa-eye-dropper',
-          name: 'Drop Shadow',
-          desc: 'Find the Perfect Color for your project',
-          toolPath: '/drop-sahdow',
-        },
-        {
-          icon: 'fa-eye-dropper',
-          name: 'Color Picker',
-          desc: 'Find the Perfect Color for your project',
-          toolPath: '/color-picker',
-        },
-        {
-          icon: 'fa-eye-dropper',
-          name: '3D Transform',
-          desc: 'Find the Perfect Color for your project',
-          toolPath: '/3d-transform',
-        },
-        {
-          icon: 'fa-eye-dropper',
-          name: 'Drop Shadow',
-          desc: 'Find the Perfect Color for your project',
-          toolPath: '/drop-sahdow',
-        },
-        {
-          icon: 'fa-eye-dropper',
-          name: 'Color Picker',
-          desc: 'Find the Perfect Color for your project',
-          toolPath: '/color-picker',
-        },
-        {
-          icon: 'fa-eye-dropper',
-          name: '3D Transform',
-          desc: 'Find the Perfect Color for your project',
-          toolPath: '/3d-transform',
-        },
-        {
-          icon: 'fa-eye-dropper',
-          name: 'Drop Shadow',
-          desc: 'Find the Perfect Color for your project',
-          toolPath: '/drop-sahdow',
-        },
-        {
-          icon: 'fa-eye-dropper',
-          name: 'Color Picker',
-          desc: 'Find the Perfect Color for your project',
-          toolPath: '/color-picker',
-        },
-        {
-          icon: 'fa-eye-dropper',
-          name: '3D Transform',
-          desc: 'Find the Perfect Color for your project',
-          toolPath: '/3d-transform',
-        },
-        {
-          icon: 'fa-eye-dropper',
-          name: 'Drop Shadow',
-          desc: 'Find the Perfect Color for your project',
-          toolPath: '/drop-sahdow',
         },
       ],
     };
