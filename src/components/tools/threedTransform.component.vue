@@ -50,6 +50,16 @@
           <div class="shape" :style="perspectiveSetter"></div>
         </div>
       </section>
+      <section class="code-dispaly">
+        <p>
+          transform: perspective(<span class="yellow">{{ perspective }}px</span
+          >) rotateX(<span class="yellow">{{ rotateX }}deg</span>) rotateY(<span
+            class="yellow"
+            >{{ rotateY }}deg</span
+          >) rotateZ(<span class="yellow">{{ rotateZ }}deg</span>);
+        </p>
+        {{ rotateZ }}deg
+      </section>
     </section>
   </div>
 </template>
@@ -90,11 +100,13 @@ h1 {
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
+  flex-wrap: wrap;
   border: 2px solid white;
   padding: 50px 0;
   border-radius: 5px;
 }
 .inputs {
+  flex: 0;
   display: flex;
   flex-direction: column;
 
@@ -107,6 +119,7 @@ h1 {
 }
 
 .frame {
+  flex: 0;
   width: 300px;
   height: 300px;
   border: solid 1px white;
@@ -118,6 +131,29 @@ h1 {
     width: 250px;
     height: 250px;
     background-color: red;
+  }
+}
+
+.code-dispaly {
+  flex: 2;
+  margin-top: 50px;
+  min-width: 60%;
+  max-width: 90%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+  }
+  .yellow {
+    color: yellow;
   }
 }
 </style>
