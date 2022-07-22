@@ -1,6 +1,6 @@
 <template>
   <div class="full-view">
-    <h1>Main Menu (Work in Progress)</h1>
+    <h1>Find the right Tool</h1>
 
     <div class="menue-container">
       <base-card-component
@@ -13,6 +13,7 @@
         :setPadding="['50px', '10px']"
       />
     </div>
+    <h2>More Tools are on the way ...</h2>
   </div>
 </template>
 
@@ -56,5 +57,9 @@ export default {
 h1 {
   color: white;
   padding-top: 10vh;
+}
+h2 {
+  color: white;
+  margin-top: 50px;
 }
 </style>
