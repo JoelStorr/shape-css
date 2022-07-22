@@ -50,7 +50,8 @@
           <div class="shape" :style="perspectiveSetter"></div>
         </div>
       </section>
-      <section class="code-dispaly">
+
+      <Base-copy :copySetter="this.copySetter">
         <p>
           transform: perspective(<span class="yellow">{{ perspective }}px</span
           >) rotateX(<span class="yellow">{{ rotateX }}deg</span>) rotateY(<span
@@ -58,14 +59,18 @@
             >{{ rotateY }}deg</span
           >) rotateZ(<span class="yellow">{{ rotateZ }}deg</span>);
         </p>
-        {{ rotateZ }}deg
-      </section>
+      </Base-copy>
     </section>
   </div>
 </template>
 
 <script>
+import BaseCopy from '../Base/BaseCopy.component.vue';
+
 export default {
+  components: {
+    'Base-copy': BaseCopy,
+  },
   data() {
     return {
       perspective: 100,
@@ -79,6 +84,9 @@ export default {
       return {
         transform: `perspective(${this.perspective}px) rotateX(${this.rotateX}deg) rotateY(${this.rotateY}deg) rotateZ(${this.rotateZ}deg)`,
       };
+    },
+    copySetter() {
+      return `transform: perspective(${this.perspective}px) rotateX(${this.rotateX}deg) rotateY(${this.rotateY}deg) rotateZ(${this.rotateZ}deg)`;
     },
   },
 };
@@ -138,25 +146,11 @@ h1 {
     background-color: red;
   }
 }
-
-.code-dispaly {
-  flex: 2;
-  margin-top: 50px;
-  min-width: 60%;
-  max-width: 90%;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.55);
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  p {
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 1rem;
-    color: white;
-  }
+p {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
   .yellow {
     color: #d19966;
   }

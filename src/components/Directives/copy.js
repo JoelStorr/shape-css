@@ -1,5 +1,5 @@
 export default {
-  mounted(el, binding) {
+  beforeUpdate(el, binding) {
     el.addEventListener('click', () => {
       const copyEl = document.createElement('textarea');
       copyEl.value = binding.value;
@@ -11,5 +11,6 @@ export default {
       document.execCommand('copy');
       document.body.removeChild(copyEl);
     });
+    console.log(binding.value);
   },
 };
