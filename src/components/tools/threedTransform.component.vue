@@ -68,7 +68,7 @@
 export default {
   data() {
     return {
-      perspective: 0,
+      perspective: 100,
       rotateX: 0,
       rotateY: 0,
       rotateZ: 0,
@@ -109,12 +109,17 @@ h1 {
   flex: 0;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid white;
+  padding: 20px;
+  min-width: 200px;
+  height: 300px;
 
   label {
     color: white;
     display: flex;
     flex-direction: column;
-    max-width: 15vw;
+    max-width: 25vw;
   }
 }
 
@@ -153,7 +158,7 @@ h1 {
     color: white;
   }
   .yellow {
-    color: yellow;
+    color: #d19966;
   }
 }
 </style>

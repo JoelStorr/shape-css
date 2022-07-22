@@ -5,7 +5,7 @@
       We currently don't support Mobile devices :( <br />
       You can copy the Link to this site below to send it to a Pc
     </p>
-    <button @click="copyURL">
+    <button v-copy="url">
       Copy URL
       <i class="fa-solid fa-clipboard space"></i>
     </button>
@@ -14,18 +14,10 @@
 
 <script>
 export default {
-  methods: {
-    copyURL() {
-      const el = document.createElement('textarea');
-      el.value = 'https://joelstorr.github.io/shape-css-gp/';
-      el.setAttribute('readonly', '');
-      el.style.position = 'absolute';
-      el.style.left = '-9999px';
-      document.body.appendChild(el);
-      el.select();
-      document.execCommand('copy');
-      document.body.removeChild(el);
-    },
+  data() {
+    return {
+      url: 'https://joelstorr.github.io/shape-css-gp/',
+    };
   },
 };
 </script>
