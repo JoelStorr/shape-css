@@ -11,6 +11,5 @@ export default {
       document.execCommand('copy');
       document.body.removeChild(copyEl);
     });
-    console.log(binding.value);
   },
 };

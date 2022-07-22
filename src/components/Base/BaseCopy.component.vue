@@ -1,5 +1,5 @@
 <template>
-  <section class="code-dispaly" v-copy="valueWatcher">
+  <section class="code-dispaly" v-copy="copySetter">
     <slot></slot>
     <div class="overlay">Copy</div>
   </section>
@@ -8,11 +8,6 @@
 <script>
 export default {
   props: ['copySetter'],
-  computed: {
-    valueWatcher() {
-      return this.copySetter;
-    },
-  },
 };
 </script>
 

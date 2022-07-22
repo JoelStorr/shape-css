@@ -51,7 +51,7 @@
         </div>
       </section>
 
-      <Base-copy :copySetter="this.copySetter">
+      <Base-copy :copySetter="copySetter">
         <p>
           transform: perspective(<span class="yellow">{{ perspective }}px</span
           >) rotateX(<span class="yellow">{{ rotateX }}deg</span>) rotateY(<span
