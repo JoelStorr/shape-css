@@ -29,7 +29,7 @@ export default {
           icon: 'fa-eye-dropper',
           name: 'Color Picker',
           desc: 'Find the Perfect Color for your project',
-          toolPath: '/color-picker',
+          toolPath: '/tools/threed-transform',
         },
         {
           icon: 'fa-eye-dropper',

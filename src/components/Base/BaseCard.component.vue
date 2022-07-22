@@ -72,5 +72,11 @@ p {
   border-radius: 2px;
   max-width: 15vw;
   min-width: 10vw;
+  transition: all 0.5s ease-in-out;
+}
+
+.outline-btn:hover {
+  color: #14151f;
+  background-color: #f8f9ff;
 }
 </style>

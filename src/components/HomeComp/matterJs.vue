@@ -140,7 +140,7 @@ export default {
   methods: {
     changeToMenue() {
       this.show = false;
-      this.$router.push('/main-menue');
+      this.$router.push('/main-menu');
       // Destroy Render Engine on Route Change
       Render.stop(this.render);
       this.render.canvas.remove();
