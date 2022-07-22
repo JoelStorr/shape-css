@@ -10,7 +10,7 @@
         :desc="example.desc"
         :toolPath="example.toolPath"
         :key="example.toolPath"
-        :setPadding="['10px', '5px']"
+        :setPadding="['50px', '10px']"
       />
     </div>
   </div>
@@ -108,6 +108,8 @@ export default {
   width: 100vw;
   height: 100vh;
   background-color: #14151f;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .menue-container {
