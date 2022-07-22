@@ -29,11 +29,11 @@ nav {
 
 i {
   position: absolute;
-  top: 30px;
+  top: 60px;
   left: 30px;
-  width: 60px;
-  height: 60px;
-  font-size: 2.5rem;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
   color: white;
   text-align: center;
   /* vertical-align: middle; */
