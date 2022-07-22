@@ -103,7 +103,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .full-view {
   width: 100vw;
   height: 100vh;
