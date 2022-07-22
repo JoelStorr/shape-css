@@ -113,7 +113,7 @@ export default {
     const boxStatic = Bodies.circle(
       width / 2,
       height / 2,
-      pheight * 40,
+      pheight * 41.6,
       {
         isStatic: true,
       },
