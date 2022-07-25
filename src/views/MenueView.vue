@@ -32,6 +32,12 @@ export default {
           desc: 'An easy way to provide 3D transforms to your elements.',
           toolPath: '/tools/threed-transform',
         },
+        {
+          icon: 'fa-solid fa-clone',
+          name: 'Drop Shadow',
+          desc: 'Easily apply shadows to your elemnts',
+          toolPath: '/tools/drop-shadow',
+        },
       ],
     };
   },
