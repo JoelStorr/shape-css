@@ -61,14 +61,14 @@
           <span class="yellow"
             >{{ shiftRight }}px {{ shiftLeft }}px {{ spread }}px {{ blur }}px
             rgba({{ color }} {{ opacity }})</span
-          >
+          >;
         </p>
         <p v-else>
           box-shadow:
           <span class="yellow"
             >{{ shiftRight }}px {{ shiftLeft }}px {{ spread }}px {{ blur }}px
             rgba({{ color }} {{ opacity }})</span
-          >
+          >;
         </p>
       </Base-copy>
     </section>
@@ -158,6 +158,16 @@ button {
     flex-direction: column;
     max-width: 25vw;
     text-align: left;
+  }
+  input[type='checkbox'] {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+  }
+
+  input[type='checkbox']:checked {
+    cursor: pointer;
   }
 }
 
