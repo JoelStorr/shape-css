@@ -107,7 +107,6 @@ export default {
     },
     copySetter() {
       if (this.inset) {
-        console.log('set Inset');
         return `box-shadow: inset ${this.shiftRight}px ${this.shiftLeft}px ${this.blur}px ${this.spread}px rgba(${this.color} ${this.opacity});`;
       }
       return `box-shadow: ${this.shiftRight}px ${this.shiftLeft}px ${this.blur}px ${this.spread}px rgba(${this.color} ${this.opacity});`;
