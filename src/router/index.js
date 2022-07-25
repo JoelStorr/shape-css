@@ -16,7 +16,9 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
+    component: () =>
+      // eslint-disable-next-line implicit-arrow-linebreak
+      import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
   },
   {
     path: '/main-menu',
@@ -36,11 +38,17 @@ const routes = [
       {
         path: 'threed-transform',
         name: '3d-transform',
-        component: () => import('../components/tools/threedTransform.component.vue'),
+        component: () =>
+          // eslint-disable-next-line implicit-arrow-linebreak
+          import('../components/tools/threedTransform.component.vue'),
+      },
+      {
+        path: 'drop-shadow',
+        name: 'drop-shadow',
+        component: () => import('../components/tools/dropShadow.component.vue'),
       },
     ],
   },
-
 ];
 
 const router = createRouter({
