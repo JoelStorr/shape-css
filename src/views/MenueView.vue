@@ -35,7 +35,7 @@ export default {
         {
           icon: 'fa-solid fa-clone',
           name: 'Box Shadow',
-          desc: 'Easily apply shadows to your elemnts',
+          desc: 'Easily apply shadows to your elements',
           toolPath: '/tools/drop-shadow',
         },
       ],
