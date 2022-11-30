@@ -1,9 +1,14 @@
 # Shape Css
 <hr/>
 
-### Video Demo:  *url here* 
-### GitHub Pages Version: *url here*
-### Description:
+### Video Demo:  [YT Video Link](https://youtu.be/nARfDWGxfzs) 
+### Video Link Clear Text: https://youtu.be/nARfDWGxfzs
+
+### GitHub Pages Version: [Shape CSS GitHub Pages](https://joelstorr.github.io/shape-css-gp/)
+### GitHub Pages Link Clear Text: https://joelstorr.github.io/shape-css-gp/
+
+
+## Description:
 
 #### Core Project Idea:
 The main Project Idea is a set of tools for creating CSS effects in a visual way and easy to use whay. The app can then retuen a String back to the user that containes the Apropiate code  snipped. As an added Bonuse I build a fun litle Physik effect for a catchier Presentastion into the Landing / frontpage of the App.
@@ -26,7 +31,7 @@ In Termes of Mobile Responsivness, the Page will detect Devices outside the Desk
 ## Project Structure
 
 ```
-Note: Since this Project used Vue.js as its core FrontEnd Libary I can't go over all of the Files that are added into
+Note: Since this Project used Vue.js as its core FrontEnd Library I can't go over all of the Files that are added into
 the Project through the Vue Libaray,
 but I will provide an overview through the Project and I will do my best,
 to highlight and explain the Files that live inside the src folder and that I created.
@@ -95,9 +100,26 @@ Holds the Logic for the 3D Transform Tool and Loads in the Copy Component to hoo
 
 **BaseCopy.component.vue**
 
-This component Interacts with the ClipBoard API of the Browser and Transmits the String that is Passesd by the Tools component to the users Memory.
+ This component uses Copy directive which allows you to copy any peace of String and pass it to be used through the ClipBoard API. Its task is to show the Copy Overlay over the Code Block
+ 
+ **Directives/copy.js**
+ Creats a selected aria of screen that can be used via the Clipboard API. i
 
 
+#### MobileHome.component.vue
+This file gets rendered when the user visites the Page from a non Desktop device. The Device Checking is done through the HomeView.vue file.
+
+
+### Router (index.js)
+The router manages the Routing of the SPA application and allows for a more Software like feel.
+
+### Store (index.js)
+The store file would allow the user to share properties like color or other info throughout the App. The Structure for that is there but it is not Implemented because there isn't a usecase jet. Intend to add that beond the Scope of the final Project.
+
+
+
+## Design
+For the Project I choose to have a High Contrast minimalistic design, which would not only allow the user to see the Shape and Shadow propperly inside the Tool section, but also make the Physiks effect stand out more on the Landing Page.
 
 
 
