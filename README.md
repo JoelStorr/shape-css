@@ -66,12 +66,36 @@ The views folder holds the indevidual views of the Application. The components f
 The Home view is tasked to handle the rendering of the Initial Matter.js component (src/components/HomeComp/matterJS.vue).
 
 **matterJs.vue**
+
 The matterJs.vue file holds the Main Logic for the Matter.js Physiks engine and handls the drawing of elements onto the Canvase as well as the Implementation of the Physiks based on the Matter.js Package.
 
 Resources for this part of the Code:
 - [Matter.js Docs](https://brm.io/matter-js/)
 - [The Coding Train: Matter.js Physics on YT](https://www.youtube.com/watch?v=urR596FsU68&list=PLRqwX-V7Uu6bLh3T_4wtrmVHOrOEM1ig_)
 
+#### MenueView.vue
+This file handles the Disply of the Menue and Dynamically Loads the right amount of Tool Cards into the View
+
+**BaseCardComponent.vue**
+
+This file handles the Dispaly of the Tool Cards and loads the Relevant Icons that get passed into the file via the *MenueView.vue* as well as pointing the Button to the Correct Application Route.
+
+#### ToolView.vue
+Dispalys the Tool itself and can loade the needed tool Component based on the Selected Route (router-view). It also contaqines the Logic to point back to the Main Aplication Menue.
+
+It can load any of the Tools that are inside the (src/components/tools/ ... .vue)
+
+**dropShadow.component.vue**
+
+This file containes the Logic to dispaly the Dropshadow Tool and uses the Copy component to hook into the ClipBoard API of the Browser.
+
+**threedtransform.component.vue**
+
+Holds the Logic for the 3D Transform Tool and Loads in the Copy Component to hook into the ClipBoard API of the Browser.
+
+**BaseCopy.component.vue**
+
+This component Interacts with the ClipBoard API of the Browser and Transmits the String that is Passesd by the Tools component to the users Memory.
 
 
 
