@@ -1,40 +1,41 @@
 # Shape Css
 <hr/>
 
-### Video Demo:  [YT Video Link](https://youtu.be/nARfDWGxfzs) 
-### Video Link Clear Text: https://youtu.be/nARfDWGxfzs
 
-### GitHub Pages Version: [Shape CSS GitHub Pages](https://joelstorr.github.io/shape-css-gp/)
-### GitHub Pages Link Clear Text: https://joelstorr.github.io/shape-css-gp/
+### Video Demo: https://youtu.be/nARfDWGxfzs
+### GitHub Pages Version: https://joelstorr.github.io/shape-css-gp/
 
 
 ## Description:
 
 #### Core Project Idea:
-The main Project Idea is a set of tools for creating CSS effects in a visual way and easy to use whay. The app can then retuen a String back to the user that containes the Apropiate code  snipped. As an added Bonuse I build a fun litle Physik effect for a catchier Presentastion into the Landing / frontpage of the App.
+The main Project Idea is a set of tools for visually creating CSS effects in an easy-to-use way. The app can then return a String back to the user that contains the Apropiate code snipped. As a Bonus, I build a fun little Physik effect for a catchier Presentation into the Landing / front page of the App.
 
 #### Overall Project Layout
-The Implememnted tooles are a Visual Transfrom tool that allows the user to Apply a 3D transform to a shape. 
+The Implemented tools are a Visual Transfrom tool that allows the user to Apply a 3D transform to a shape. 
 (See: https://joelstorr.github.io/shape-css-gp/tools/threed-transform)
 
-The Seconde tool  I build is a Shadow generator that can applie the Box Shadow Property on an element. 
+The Seconde tool  I build is a Shadow generator that can apply the Box Shadow Property on an element. 
 (See: https://joelstorr.github.io/shape-css-gp/tools/drop-shadow)
 
-Both of the Tools contain the Ability to not only represent the current Properties on the screen, when they are changed but also to Interact with the Clipboard API.
+Both of the Tools contain the ability to not only represent the current Properties on the screen when they are changed but also to Interact with the Clipboard API.
 
-The Landing Page for the Project containes a Libary called Matter JS that allows you to draw shapes into a HTML Canvas and to calculate there Phisical behavior on set canvas. 
+The Landing Page for the Project contains a Libary called Matter JS that allows you to draw shapes into an HTML Canvas and to calculate their Physical behavior on the canvas. 
 (See: https://joelstorr.github.io/shape-css-gp/)
 
-In Termes of Mobile Responsivness, the Page will detect Devices outside the Desktop realm and will tell the prompt the user to use a Desktop to access the Application. On the Screen I provide a Link to the Page, that can be copied over to the CLipBoard to be send to your computer.
+In Termes of Mobile Responsiveness, the Page will detect Devices outside the Desktop realm and will tell prompt the user to use a Desktop to access the Application. On the Screen, I provide a Link to the Page, that can be copied over to the CLipBoard to be sent to your computer.
 
 
 ## Project Structure
 
 ```
-Note: Since this Project used Vue.js as its core FrontEnd Library I can't go over all of the Files that are added into
-the Project through the Vue Libaray,
-but I will provide an overview through the Project and I will do my best,
+Note: Since this Project used Vue.js and the Vue.js CLI as its core FrontEnd Library I can't go over all of the Files that are added into
+the Project through the Vue Library,
+but I will provide an overview of the Project and I will do my best,
 to highlight and explain the Files that live inside the src folder and that I created.
+
+Also, note that the Packages file for third Party Packages are not included in the GitHub repo.
+These can be added via npm command.
 ```
 
 Entry Point to the Project:
@@ -55,44 +56,44 @@ src
 
 
 ### main.js
-The main.js file builds the entry point to the Application imports the Vue App, router, store as well as the Copy Directive, which handles the Interaction with the ClipBoard API. On top of that it Inits the store and router as well as exposing the Copy directive to the App, before it gets mounted by Vue.
+The main.js file builds the entry point to the Application imports the Vue App, router, and store as well as the Copy Directive, which handles the Interaction with the ClipBoard API. On top of that, it Inits the store and router as well as exposes the Copy directive to the App, before it gets mounted by Vue.
 
 
 ### app.vue
-The app.vue file builds the main render field for the Application and holds the information to render the view as well as the Lopgic for deciding if a Desktop or Mobile view of the programm should be displayed. Since a Vue file is used iot can also hold the Main Styles for the App.
+The app.vue file builds the main render field for the Application and holds the information to render the view as well as the Logic for deciding if a Desktop or Mobile view of the program should be displayed. Since a Vue file is used it can also hold the Main Styles for the App.
 
 ### assets:
 The assets folder is in this case mostly empty and unused but there to be used if the Project is extended in the future and to have a full Vue.js structure.
 
 ### views & components:
-The views folder holds the indevidual views of the Application. The components folder holds the Indevidual parts of the Application that are rather code intesive or reused in Multiple Instances. I choose to fisrst explaine the View and then the corisponding components to make the Documentation not to scattered.
+The views folder holds the individual views of the Application. The components folder holds the Individual parts of the Application that are rather code-intensive or reused in Multiple Instances. I choose to first explain the View and then the corresponding components to make the Documentation not too scattered.
 
 #### HomeView.vue 
 The Home view is tasked to handle the rendering of the Initial Matter.js component (src/components/HomeComp/matterJS.vue).
 
 **matterJs.vue**
 
-The matterJs.vue file holds the Main Logic for the Matter.js Physiks engine and handls the drawing of elements onto the Canvase as well as the Implementation of the Physiks based on the Matter.js Package.
+The matterJs.vue file holds the Main Logic for the Matter.js Physiks engine and handles the drawing of elements onto the Canvas as well as the Implementation of the Physics based on the Matter.js Package.
 
 Resources for this part of the Code:
 - [Matter.js Docs](https://brm.io/matter-js/)
 - [The Coding Train: Matter.js Physics on YT](https://www.youtube.com/watch?v=urR596FsU68&list=PLRqwX-V7Uu6bLh3T_4wtrmVHOrOEM1ig_)
 
 #### MenueView.vue
-This file handles the Disply of the Menue and Dynamically Loads the right amount of Tool Cards into the View
+This file handles the Display of the menu and Dynamically Loads the right amount of Tool Cards into the View
 
 **BaseCardComponent.vue**
 
-This file handles the Dispaly of the Tool Cards and loads the Relevant Icons that get passed into the file via the *MenueView.vue* as well as pointing the Button to the Correct Application Route.
+This file handles the Display of the Tool Cards and loads the Relevant Icons that get passed into the file via the *MenueView.vue* as well as pointing the Button to the Correct Application Route.
 
 #### ToolView.vue
-Dispalys the Tool itself and can loade the needed tool Component based on the Selected Route (router-view). It also contaqines the Logic to point back to the Main Aplication Menue.
+Displays the Tool itself and can load the needed tool Component based on the Selected Route (router view). It also continues the Logic to point back to the Main application menu.
 
 It can load any of the Tools that are inside the (src/components/tools/ ... .vue)
 
 **dropShadow.component.vue**
 
-This file containes the Logic to dispaly the Dropshadow Tool and uses the Copy component to hook into the ClipBoard API of the Browser.
+This file contains the Logic to display the Drop shadow Tool and uses the Copy component to hook into the ClipBoard API of the Browser.
 
 **threedtransform.component.vue**
 
@@ -103,23 +104,23 @@ Holds the Logic for the 3D Transform Tool and Loads in the Copy Component to hoo
  This component uses Copy directive which allows you to copy any peace of String and pass it to be used through the ClipBoard API. Its task is to show the Copy Overlay over the Code Block
  
  **Directives/copy.js**
- Creats a selected aria of screen that can be used via the Clipboard API. i
+ Creates a selected aria of the screen that can be used via the Clipboard API. i
 
 
 #### MobileHome.component.vue
-This file gets rendered when the user visites the Page from a non Desktop device. The Device Checking is done through the HomeView.vue file.
+This file gets rendered when the user visits the Page from a non Desktop device. The Device Checking is done through the HomeView.vue file.
 
 
 ### Router (index.js)
 The router manages the Routing of the SPA application and allows for a more Software like feel.
 
 ### Store (index.js)
-The store file would allow the user to share properties like color or other info throughout the App. The Structure for that is there but it is not Implemented because there isn't a usecase jet. Intend to add that beond the Scope of the final Project.
+The store file would allow the user to share properties like color or other info throughout the App. The Structure for that is there but it is not implemented because there isn't a use case jet. Intend to add that beyond the Scope of the final Project.
 
 
 
 ## Design
-For the Project I choose to have a High Contrast minimalistic design, which would not only allow the user to see the Shape and Shadow propperly inside the Tool section, but also make the Physiks effect stand out more on the Landing Page.
+For the Project, I choose to have a High Contrast minimalistic design, which would not only allow the user to see the Shape and Shadow properly inside the Tool section but also make the Physics effect stand out more on the Landing Page.
 
 
 
