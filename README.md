@@ -5,6 +5,7 @@
 ### Video Demo: https://youtu.be/nARfDWGxfzs
 ### GitHub Pages Version: https://joelstorr.github.io/shape-css-gp/
 
+Part of Edx & Harvard CS50 Program.
 
 ## Description:
 
