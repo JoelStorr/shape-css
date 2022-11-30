@@ -22,11 +22,30 @@ The Landing Page for the Project containes a Libary called Matter JS that allows
 
 In Termes of Mobile Responsivness, the Page will detect Devices outside the Desktop realm and will tell the prompt the user to use a Desktop to access the Application. On the Screen I provide a Link to the Page, that can be copied over to the CLipBoard to be send to your computer.
 
-```
-Note: Since this Project used Vue.js as its core FrontEnd Libary I can't go over all of the Files that are added into the Project through the Vue Libaray, but I will provide an overview through the Project and I will do my best to highlight and explain the Files that live inside the src folder and that I created 
+
+## Project Structure
 
 ```
+Note: Since this Project used Vue.js as its core FrontEnd Libary I can't go over all of the Files that are added into
+the Project through the Vue Libaray,
+but I will provide an overview through the Project and I will do my best,
+to highlight and explain the Files that live inside the src folder and that I created.
+```
 
+Entry Point to the Project:
+
+src
+
+- assets
+- components
+- router
+- store
+- views
+- App.vue
+- main.js
+
+
+### main.js
 
 
 # Clone and Setup Guide 
