@@ -1,14 +1,18 @@
 # Shape Css
 <hr/>
 
+### Video Demo:  *url here* 
+### GitHub Pages Version: *url here*
+### Description:
+
+#### Core Project Idea
 
 
 
 
 
 
-
-
+# Clone and Setup Guide 
 
 ## Project setup
 ```
