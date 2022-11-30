@@ -38,6 +38,10 @@ src
 
 - assets
 - components
+  - Base
+  - Directives
+  - HomeComp
+  - tools   
 - router
 - store
 - views
@@ -46,6 +50,33 @@ src
 
 
 ### main.js
+The main.js file builds the entry point to the Application imports the Vue App, router, store as well as the Copy Directive, which handles the Interaction with the ClipBoard API. On top of that it Inits the store and router as well as exposing the Copy directive to the App, before it gets mounted by Vue.
+
+
+### app.vue
+The app.vue file builds the main render field for the Application and holds the information to render the view as well as the Lopgic for deciding if a Desktop or Mobile view of the programm should be displayed. Since a Vue file is used iot can also hold the Main Styles for the App.
+
+### assets:
+The assets folder is in this case mostly empty and unused but there to be used if the Project is extended in the future and to have a full Vue.js structure.
+
+### views & components:
+The views folder holds the indevidual views of the Application. The components folder holds the Indevidual parts of the Application that are rather code intesive or reused in Multiple Instances. I choose to fisrst explaine the View and then the corisponding components to make the Documentation not to scattered.
+
+#### HomeView.vue 
+The Home view is tasked to handle the rendering of the Initial Matter.js component (src/components/HomeComp/matterJS.vue).
+
+**matterJs.vue**
+The matterJs.vue file holds the Main Logic for the Matter.js Physiks engine and handls the drawing of elements onto the Canvase as well as the Implementation of the Physiks based on the Matter.js Package.
+
+Resources for this part of the Code:
+- [Matter.js Docs](https://brm.io/matter-js/)
+- [The Coding Train: Matter.js Physics on YT](https://www.youtube.com/watch?v=urR596FsU68&list=PLRqwX-V7Uu6bLh3T_4wtrmVHOrOEM1ig_)
+
+
+
+
+
+
 
 
 # Clone and Setup Guide 
