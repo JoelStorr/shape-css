@@ -29,8 +29,8 @@ In Termes of Mobile Responsiveness, the Page will detect Devices outside the Des
 ## Project Structure
 
 ```
-Note: Since this Project used Vue.js and the Vue.js CLI as its core FrontEnd Library I can't go over all of the Files that are added into
-the Project through the Vue Library,
+Note: Since this Project used Vue.js and the Vue.js CLI as its core FrontEnd Library
+I can't go over all of the Files that are added into the Project through the Vue Library,
 but I will provide an overview of the Project and I will do my best,
 to highlight and explain the Files that live inside the src folder and that I created.
 
